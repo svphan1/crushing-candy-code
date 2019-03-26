@@ -16,12 +16,27 @@ function accessesingData2() {
 
 // Set a variable to equal the prices of the 'Mint Wafers' in store2. Then reassign it to a new value. When you update your new variable, does the price in the store2 data change? Return your answer as a boolean and write a comment on why or why not.
 function updatingData1() {
+  let wafersPrice = store2['inventory prices']['Mint Wafers'];
+  wafersPrice = 1.99;
+  return false;
 
+  /* The price in the store2 data does not change because store2 is an object type.
+  Objects are passed by reference. This means that reassigning the original 
+  wafersPrice to a new price only only changes the reference pointer to a new price without 
+  altering the original data.
+  */
 }
 
 // Set a variable equal to the 'Caramel Twists' sale dates in store2. Use pop to remove one of the sale dates for store2's 'Caramel Twists'. Does your variables value match up with what is in store2? Return your answer as a boolean and write a comment on why or why not.
 function updatingData2() {
-  
+  let caramelSaleDates = store2['sale dates']['Caramel Twists'];
+  caramelSaleDates.pop();
+
+  return true;
+
+  /* The variable caramelSalesDates matches up with the data in store2 after the .pop() method
+  because .pop() is a mutating method. Since both points to the same spot in memory, .pop() will return our data, mutated. In order 
+  to not mutate the original data, a method such as .filter() should be used */
 }
 
 /////////// LOOPING OVER DATA ///////////

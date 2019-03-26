@@ -4,12 +4,12 @@ var store1 = require('./store1-data.js');
 
 // Return the value '4.63' from store1
 function accessesingData1() {
-
+  return store1['2015-01-08'][0][1];
 }
 
 // Return how many 'Mint Wafers' were sold on January 6th
 function accessesingData2() {
-
+  return store1['2015-01-06'][1][2];
 }
 
 // *********** LOOPING OVER DATA *********** \\
