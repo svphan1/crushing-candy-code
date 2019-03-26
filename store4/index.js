@@ -24,7 +24,7 @@ function loopingData1() {
       candiesOverTwoDollars.push(key);
     }
   }
-  return candiesOverTwoDollars
+  return candiesOverTwoDollars;
 }
 
 // Create a loop to return an object that has the candy name as the key and the cost as the value
