@@ -44,7 +44,16 @@ function loopingData3() {
 
 // Determine how much money store3 made on January 9th and return the result fixed to two decimal points
 function challenge1() {
+  let salesJan9 = store3[3]['inventory sold'];
+  let income = 0;
 
+  for (let key in salesJan9) {
+    let cost = salesJan9[key]['cost'];
+    let quantity = salesJan9[key]['quantity'];
+    let total = cost * quantity;
+    income += total + income;
+  }
+  return income.toFixed(2);
 }
 
 module.exports = {
