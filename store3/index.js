@@ -44,9 +44,11 @@ function loopingData3() {
 
 // Determine how much money store3 made on January 9th and return the result fixed to two decimal points
 function challenge1() {
+  // declare sales variable and assign to inventory sold
   let salesJan9 = store3[3]['inventory sold'];
+  //declare income variable with initial value of 0
   let income = 0;
-
+  //loop over salesJan9 variable, multiple cost by quantity, add to income variable, return result fixed to two decimal points
   for (let key in salesJan9) {
     let cost = salesJan9[key]['cost'];
     let quantity = salesJan9[key]['quantity'];
